@@ -1,92 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raíces y Trazos</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raíces y Trazos | Mitos y Leyendas de Popayán</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">
-                imagenes/logo.png
-                <span>Raíces y Trazos</span>
-            </div>
+  <!-- Encabezado / Navegación -->
+  <header class="header">
+    <div class="contenedor header-contenido">
+      
+      <!-- Espacio para el Logo -->
+      <a href="#" class="logo-contenedor">
+        <div class="logo-placeholder">
+          <!-- Reemplaza la etiqueta <img> con tu archivo de logo (ej. <img src="logo.png" alt="Logo Raíces y Trazos">) -->
+          <span class="logo-texto-icono">R&T</span>
+        </div>
+        <div class="logo-info">
+          <span class="nombre-sitio">Raíces y Trazos</span>
+          <span class="slogan-sitio">Leyendas de Popayán</span>
+        </div>
+      </a>
 
-            <ul class="menu">
-                <li><a hrefInicio</a></li>
-                <li>#imagenesImágenes</a></li>
-                <li><videosVideos</a></li>
-                <li>#audioAudio</a></li>
-            </ul>
-        </nav>
-    </header>
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menú">
+        ☰
+      </button>
 
+      <nav class="navegacion" id="navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#imagenes">Galería</a>
+        <a href="#videos">Videos</a>
+        <a href="#audio">Audiorelatos</a>
+        <a href="#categorias">Barrios y Mitos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Inicio / Banner -->
     <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Raíces y Trazos</h1>
-
-            <p>
-                Raíces y trazos parte de una indagación con los adultos mayores:
-                 ¿qué leyendas de Popayán recuerdan y cómo cambian de sentido al 
-                 pasar a otra generación? Con un corpus delimitado de leyendas 
-                 como guía, conversaremos primero con ellos para identificar cuáles 
-                 mencionan. Elegiremos la más recordada y seguiremos su resignificación: 
-                 de la voz del mayor, al contraste del historiador y al trazo de niños 
-                 de segundo grado. La intención es reconocer estas leyendas como 
-                 patrimonio vivo de Popayán.
-            </p>
+      <div class="contenedor hero-contenido">
+        <h1>Mitos y Leyendas de Popayán</h1>
+        <p>Un viaje por la memoria oral, las casonas coloniales, las sombras del Humilladero y los misterios que habitan la Ciudad Blanca.</p>
+        <div class="hero-acciones">
+          <a href="#audio" class="btn btn-primario">Escuchar Leyendas</a>
+          <a href="#imagenes" class="btn btn-secundario">Explorar Galería</a>
         </div>
+      </div>
     </section>
 
-    <section id="imagenes">
-        <h2>Galería de Imágenes</h2>
+    <!-- Galería de Imágenes -->
+    <section id="imagenes" class="seccion contenedor">
+      <h2 class="titulo-seccion">Trazos de la Memoria (Galería)</h2>
+      <p class="subtitulo-seccion">Ilustraciones y postales de los rincones mitológicos payaneses.</p>
+      
+      <div class="grid-galeria">
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Puente del Humilladero">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>El Puente del Humilladero</h3>
+            <p>Cuenta la tradición que al caer la medianoche, las sombras de los antiguos caminantes cruzan bajo sus arcos.</p>
+          </div>
+        </article>
 
-        <div class="galeria">
-            galerias/foto1.jpg
-            galerias/foto2.jpg
-            <imgrias/foto3.jpg
-        </div>
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="La Viuda de la Pampa">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>La Viuda de la Pampa</h3>
+            <p>Aparición espectral en los antiguos callejones de La Pampa que desorienta a los trasnochadores.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="El Cerro de las Tres Cruces">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Cerro de las Tres Cruces</h3>
+            <p>Leyenda del encadenamiento del espíritu del mal para proteger los valles del Pubén.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="videos">
-        <h2>Galería de Videos</h2>
-
-        <div class="videos">
-
-            <div class="card">
-                <video controls>
-                    videos/video1.mp4
-                </video>
+    <!-- Galería de Videos -->
+    <section id="videos" class="seccion seccion-oscura">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Documentales y Relatos en Video</h2>
+        <p class="subtitulo-seccion">Proyecciones sobre la tradición oral e historia mística de la ciudad.</p>
+        
+        <div class="grid-videos">
+          <div class="tarjeta-video">
+            <div class="video-contenedor">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="El Duende y las Callejuelas" allowfullscreen></iframe>
             </div>
+            <h3>El Duende y las Callejuelas de Popayán</h3>
+            <p>Historias de los ancianos sobre los encantos en las casonas coloniales.</p>
+          </div>
 
-        </div>
-    </section>
-
-    <section id="audio">
-        <h2>Reproductor de Audio</h2>
-
-        <div class="audio-list">
-
-            <div class="audio-card">
-                <h3>Audio 1</h3>
-
-                <audio controls>
-                    audio/audio1.mp3
-                </audio>
+          <div class="tarjeta-video">
+            <div class="video-contenedor">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Los Túneles Secretos" allowfullscreen></iframe>
             </div>
-
+            <h3>Los Misteriosos Túneles Subterráneos</h3>
+            <p>Verdades y mitos sobre las redes secretas bajo el centro histórico.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        © 2026 Raíces y Trazos
-    </footer>
+    <!-- Reproductor de Audio -->
+    <section id="audio" class="seccion contenedor">
+      <h2 class="titulo-seccion">Voces de la Noche (Audiorelatos)</h2>
+      <p class="subtitulo-seccion">Escucha las narraciones orales dramatizadas.</p>
 
+      <div class="reproductor-caja">
+        <div class="reproductor-info">
+          <div class="icono-disco">🎙️</div>
+          <div>
+            <h3 id="audio-titulo">La Leyenda de la Carreta Puta</h3>
+            <p id="audio-subtitulo">Narrado por Abuelos de Popayán</p>
+          </div>
+        </div>
+        
+        <audio id="reproductor" controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="seccion seccion-oscura">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Categorías y Sectores Místicos</h2>
+        <p class="subtitulo-seccion">Filtra las historias según su origen urbano o rural.</p>
+
+        <div class="grid-categorias">
+          <div class="tarjeta-categoria">
+            <div class="cat-icono">🏰</div>
+            <h3>Centro Histórico</h3>
+            <p>Espectros de casonas, portones de madera, templos e hidalgos.</p>
+          </div>
+
+          <div class="tarjeta-categoria">
+            <div class="cat-icono">🌿</div>
+            <h3>Ríos y Cerros</h3>
+            <p>El Río Molino, Cerro de El Morro y la naturaleza encantada del Pubén.</p>
+          </div>
+
+          <div class="tarjeta-categoria">
+            <div class="cat-icono">👻</div>
+            <h3>Espantos Payaneses</h3>
+            <p>La Llorona, El Cura sin Cabeza, El Carabo y La Mula de tres patas.</p>
+          </div>
+
+          <div class="tarjeta-categoria">
+            <div class="cat-icono">📜</div>
+            <h3>Tradición Oral</h3>
+            <p>Crónicas, coplas y relatos contados de generación en generación.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <div class="contenedor footer-contenido">
+      <div>
+        <h4>Raíces y Trazos</h4>
+        <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
+      </div>
+      <div>
+        <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JS básico para el menú responsivo
+    const btnMenu = document.getElementById('btn-menu');
+    const navegacion = document.getElementById('navegacion');
+
+    btnMenu.addEventListener('click', () => {
+      navegacion.classList.toggle('activa');
+    });
+  </script>
 </body>
-
 </html>
