@@ -15,7 +15,7 @@
       <!-- Espacio para el Logo -->
       <a href="#" class="logo-contenedor">
         <div class="logo-placeholder">
-          <!-- Reemplaza la siguiente etiqueta <img> con tu archivo de logo (ej. <img src="img/logo.png" alt="Logo Raíces y Trazos">) -->
+          <!-- Puedes reemplazar este span por: <img src="img/logo.png" alt="Logo Raíces y Trazos"> -->
           <span class="logo-texto-icono">R&T</span>
         </div>
         <div class="logo-info">
@@ -41,16 +41,19 @@
   </header>
 
   <main>
-    <!-- Sección Inicio / Hero Compacto con Video Local -->
-    <section id="inicio" class="hero hero-compacto">
-      <div class="video-fondo-contenedor">
-        <video autoplay loop muted playsinline preload="auto" class="video-fondo">
+    <!-- SECCIÓN INICIO / HERO CON VIDEO DE FONDO -->
+    <section id="inicio" class="hero-video">
+      <!-- Contenedor del video en segundo plano -->
+      <div class="video-fondo-wrapper">
+        <video autoplay loop muted playsinline preload="auto" class="video-elemento">
           <source src="videos/video1.mp4" type="video/mp4">
           Tu navegador no soporta el reproductor de video.
         </video>
+        <!-- Capa semitransparente con paleta de color para garantizar legibilidad -->
         <div class="video-overlay"></div>
       </div>
-    
+
+      <!-- Contenido superpuesto sobre el video -->
       <div class="contenedor hero-contenido">
         <h1>Mitos y Leyendas de Popayán</h1>
         <p>Descubre los relatos orales, misterios y encantos que habitan en las casonas, empedrados y cerros de la Ciudad Blanca.</p>
@@ -194,13 +197,25 @@
     </div>
   </footer>
 
-  <!-- Script para menú móvil -->
+  <!-- Script para Menú Móvil y Reproducción Asegurada del Video -->
   <script>
+    // Menú hamburguesa
     const btnMenu = document.getElementById('btn-menu');
     const navegacion = document.getElementById('navegacion');
 
     btnMenu.addEventListener('click', () => {
       navegacion.classList.toggle('activa');
+    });
+
+    // Forzar reproducción del video en silencio para navegadores estrictos
+    window.addEventListener('DOMContentLoaded', () => {
+      const video = document.querySelector('.video-elemento');
+      if (video) {
+        video.muted = true;
+        video.play().catch(err => {
+          console.log("El navegador bloqueó el autoplay del video:", err);
+        });
+      }
     });
   </script>
 </body>
