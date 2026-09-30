@@ -15,16 +15,16 @@
       <!-- Espacio para el Logo -->
       <a href="#" class="logo-contenedor">
         <div class="logo-placeholder">
-          <!-- Reemplaza la etiqueta <img> con tu archivo de logo (ej. <img src="logo.png" alt="Logo Raíces y Trazos">) -->
+          <!-- Reemplazar src por tu archivo de logo (ej: <img src="logo.png" alt="Logo Raíces y Trazos">) -->
           <span class="logo-texto-icono">R&T</span>
         </div>
         <div class="logo-info">
           <span class="nombre-sitio">Raíces y Trazos</span>
-          <span class="slogan-sitio">Leyendas de Popayán</span>
+          <span class="slogan-sitio">Mitos y Leyendas de Popayán</span>
         </div>
       </a>
 
-      <button class="btn-menu" id="btn-menu" aria-label="Abrir menú">
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menú de navegación">
         ☰
       </button>
 
@@ -33,20 +33,31 @@
         <a href="#imagenes">Galería</a>
         <a href="#videos">Videos</a>
         <a href="#audio">Audiorelatos</a>
-        <a href="#categorias">Barrios y Mitos</a>
+        <a href="#categorias">Categorías</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Sección Inicio / Banner -->
+    <!-- Sección Inicio / Hero con Video de Fondo -->
     <section id="inicio" class="hero">
+      <!-- Video de fondo con fallback -->
+      <div class="hero-video-container">
+        <video class="hero-video" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-fog-over-a-dark-forest-at-night-41541-large.mp4" type="video/mp4">
+          Tu navegador no soporta el reproductor de video HTML5.
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
       <div class="contenedor hero-contenido">
+        <span class="badge-herencia">Tradición Oral de la Ciudad Blanca</span>
         <h1>Mitos y Leyendas de Popayán</h1>
-        <p>Un viaje por la memoria oral, las casonas coloniales, las sombras del Humilladero y los misterios que habitan la Ciudad Blanca.</p>
+        <p>Un viaje misterioso por los callejones coloniales, el Puente del Humilladero, el Cerro de las Tres Cruces y los espectros ancestrales del Cauca.</p>
+        
         <div class="hero-acciones">
-          <a href="#audio" class="btn btn-primario">Escuchar Leyendas</a>
-          <a href="#imagenes" class="btn btn-secundario">Explorar Galería</a>
+          <a href="#audio" class="btn btn-primario">▶ Escuchar Audiorelatos</a>
+          <a href="#imagenes" class="btn btn-secundario">Explorar Leyendas</a>
         </div>
       </div>
     </section>
@@ -63,27 +74,27 @@
           </div>
           <div class="tarjeta-cuerpo">
             <h3>El Puente del Humilladero</h3>
-            <p>Cuenta la tradición que al caer la medianoche, las sombras de los antiguos caminantes cruzan bajo sus arcos.</p>
+            <p>Cuenta la tradición que al caer la medianoche, las sombras de los antiguos caminantes y carretas cruzan bajo sus arcos de ladrillo.</p>
           </div>
         </article>
 
         <article class="tarjeta-imagen">
           <div class="img-wrapper">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="La Viuda de la Pampa">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="La Viuda de la Pampa">
           </div>
           <div class="tarjeta-cuerpo">
             <h3>La Viuda de la Pampa</h3>
-            <p>Aparición espectral en los antiguos callejones de La Pampa que desorienta a los trasnochadores.</p>
+            <p>Aparición espectral en los antiguos empedrados del sector de La Pampa que extravía a los viajeros nocturnos.</p>
           </div>
         </article>
 
         <article class="tarjeta-imagen">
           <div class="img-wrapper">
-            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="El Cerro de las Tres Cruces">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Cerro de las Tres Cruces">
           </div>
           <div class="tarjeta-cuerpo">
             <h3>Cerro de las Tres Cruces</h3>
-            <p>Leyenda del encadenamiento del espíritu del mal para proteger los valles del Pubén.</p>
+            <p>Leyenda del encadenamiento del espíritu del mal para proteger la fertilidad del Valle del Pubén.</p>
           </div>
         </article>
       </div>
@@ -92,24 +103,24 @@
     <!-- Galería de Videos -->
     <section id="videos" class="seccion seccion-oscura">
       <div class="contenedor">
-        <h2 class="titulo-seccion">Documentales y Relatos en Video</h2>
-        <p class="subtitulo-seccion">Proyecciones sobre la tradición oral e historia mística de la ciudad.</p>
+        <h2 class="titulo-seccion">Documentales y Cortometrajes</h2>
+        <p class="subtitulo-seccion">Proyecciones sobre la historia mística de Popayán.</p>
         
         <div class="grid-videos">
           <div class="tarjeta-video">
             <div class="video-contenedor">
               <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="El Duende y las Callejuelas" allowfullscreen></iframe>
             </div>
-            <h3>El Duende y las Callejuelas de Popayán</h3>
-            <p>Historias de los ancianos sobre los encantos en las casonas coloniales.</p>
+            <h3>El Duende y las Callejuelas Colonial</h3>
+            <p>Relatos de los sabios de la ciudad sobre los encantos en los zaguanes y solares antiguos.</p>
           </div>
 
           <div class="tarjeta-video">
             <div class="video-contenedor">
               <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Los Túneles Secretos" allowfullscreen></iframe>
             </div>
-            <h3>Los Misteriosos Túneles Subterráneos</h3>
-            <p>Verdades y mitos sobre las redes secretas bajo el centro histórico.</p>
+            <h3>Misterios del Subterráneo Payanés</h3>
+            <p>Historias e investigaciones sobre las redes secretas bajo el centro histórico.</p>
           </div>
         </div>
       </div>
@@ -118,14 +129,14 @@
     <!-- Reproductor de Audio -->
     <section id="audio" class="seccion contenedor">
       <h2 class="titulo-seccion">Voces de la Noche (Audiorelatos)</h2>
-      <p class="subtitulo-seccion">Escucha las narraciones orales dramatizadas.</p>
+      <p class="subtitulo-seccion">Escucha las narraciones dramatizadas de los mitos orales.</p>
 
       <div class="reproductor-caja">
         <div class="reproductor-info">
           <div class="icono-disco">🎙️</div>
           <div>
-            <h3 id="audio-titulo">La Leyenda de la Carreta Puta</h3>
-            <p id="audio-subtitulo">Narrado por Abuelos de Popayán</p>
+            <h3 id="audio-titulo">La Carreta Puta de Popayán</h3>
+            <p id="audio-subtitulo">Narrado por historiadores y cultores de la memoria oral</p>
           </div>
         </div>
         
@@ -139,32 +150,32 @@
     <!-- Categorías -->
     <section id="categorias" class="seccion seccion-oscura">
       <div class="contenedor">
-        <h2 class="titulo-seccion">Categorías y Sectores Místicos</h2>
-        <p class="subtitulo-seccion">Filtra las historias según su origen urbano o rural.</p>
+        <h2 class="titulo-seccion">Categorías y Espacios Místicos</h2>
+        <p class="subtitulo-seccion">Explora los mitos según su ubicación y tipología.</p>
 
         <div class="grid-categorias">
           <div class="tarjeta-categoria">
             <div class="cat-icono">🏰</div>
             <h3>Centro Histórico</h3>
-            <p>Espectros de casonas, portones de madera, templos e hidalgos.</p>
+            <p>Fantasmas en casonas blancas, zaguanes, templos e hidalgos.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">🌿</div>
             <h3>Ríos y Cerros</h3>
-            <p>El Río Molino, Cerro de El Morro y la naturaleza encantada del Pubén.</p>
+            <p>El Río Molino, Cerro de El Morro y los encantos del Valle del Pubén.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">👻</div>
             <h3>Espantos Payaneses</h3>
-            <p>La Llorona, El Cura sin Cabeza, El Carabo y La Mula de tres patas.</p>
+            <p>La Viuda, El Cura sin Cabeza, El Carabo y La Mula de tres patas.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">📜</div>
             <h3>Tradición Oral</h3>
-            <p>Crónicas, coplas y relatos contados de generación en generación.</p>
+            <p>Crónicas, coplas y mitos transmitidos por los abuelos.</p>
           </div>
         </div>
       </div>
@@ -176,7 +187,7 @@
     <div class="contenedor footer-contenido">
       <div>
         <h4>Raíces y Trazos</h4>
-        <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
+        <p>Proyecto de preservación cultural y memoria oral de Popayán, Cauca.</p>
       </div>
       <div>
         <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
@@ -185,7 +196,6 @@
   </footer>
 
   <script>
-    // JS básico para el menú responsivo
     const btnMenu = document.getElementById('btn-menu');
     const navegacion = document.getElementById('navegacion');
 
