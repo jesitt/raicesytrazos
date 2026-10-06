@@ -1,17 +1,17 @@
 /* ==========================================================================
-   PALETA DE COLORES Y VARIABLES GLOBALES
+   PALETA DE COLORES Y VARIABLES
    ========================================================================== */
 :root {
-  --color-primario: #4A2C17;
-  --color-secundario: #5D3A20;
-  --color-acento: #7A5A42;
-  --color-fondo: #ffffff;
-  --color-fondo-claro: #ECE5DB;
-  --color-texto: #2D1B0F;
-}
+  --color-primario: #5A3413;       /* Sepia */
+  --color-secundario: #C3B69C;     /* Arena */
+  --color-acento: #5A3413;         /* Sepia */
+  --color-fondo: #ffffff;          /* Fondo Blanco */
+  --color-fondo-claro: #EFE4CF;    /* Papel */
+  --color-texto: #1E1A16;          /* Tinta */
+}     
 
 /* ==========================================================================
-   RESETEO Y ESTILOS BASE
+   ESTILOS GENERALES
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -38,7 +38,7 @@ a {
 }
 
 /* ==========================================================================
-   HEADER Y NAVEGACIÓN
+   HEADER Y LOGO
    ========================================================================== */
 .header {
   background-color: var(--color-primario);
@@ -53,10 +53,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0;
+  padding: 1rem 0;
 }
 
-/* Contenedor del Logo */
+/* Espacio reservado para el Logo */
 .logo-contenedor {
   display: flex;
   align-items: center;
@@ -64,8 +64,8 @@ a {
 }
 
 .logo-placeholder {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background-color: var(--color-fondo-claro);
   border: 2px solid var(--color-acento);
   border-radius: 8px;
@@ -84,7 +84,7 @@ a {
 .logo-texto-icono {
   font-weight: bold;
   color: var(--color-primario);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .logo-info {
@@ -93,7 +93,7 @@ a {
 }
 
 .nombre-sitio {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-fondo-claro);
   line-height: 1.1;
@@ -101,10 +101,10 @@ a {
 
 .slogan-sitio {
   font-size: 0.75rem;
-  color: var(--color-acento);
+  color: var(--color-secundario);
 }
 
-/* Enlaces de Navegación */
+/* Navegación */
 .navegacion {
   display: flex;
   gap: 1.5rem;
@@ -131,68 +131,76 @@ a {
 }
 
 /* ==========================================================================
-   ESTILOS PARA EL VIDEO DE FONDO EN EL INICIO
+   HERO / INICIO
    ========================================================================== */
-.hero-video {
+.hero {
   position: relative;
-  min-height: 420px; /* Tamaño compacto para el inicio */
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   color: #ffffff;
-  padding: 3rem 1rem;
+  padding: 5rem 0;
+  text-align: center;
 }
 
-.video-fondo-wrapper {
+/* Contenedor responsivo para adaptar el iframe al fondo */
+.hero-video-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* Mantiene la proporción 16:9 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16/9 = 1.777 */
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Permite interactuar con los botones e interacción del usuario */
   z-index: 1;
 }
 
-.video-elemento {
+.hero-video-bg iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta el video para cubrir todo el contenedor sin estirarse */
-  display: block;
+  border: none;
 }
 
-.video-overlay {
+.hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa de oscurecimiento con tinte Tinta / Sepia para legibilidad del texto */
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* Filtro de color oscuro con los tonos de la paleta para resaltar el texto */
-  background: linear-gradient(
-    135deg, 
-    rgba(45, 27, 15, 0.85) 0%, 
-    rgba(93, 58, 32, 0.75) 100%
-  );
+  /* Bajamos la opacidad de 0.65 - 0.75 a 0.25 - 0.35 para mayor claridad */
+  background: linear-gradient(rgba(30, 26, 22, 0.25), rgba(90, 52, 19, 0.35));
+  z-index: 2;
 }
 
 .hero-contenido {
   position: relative;
-  z-index: 2; /* Asegura que el texto y botones queden por encima del video y del overlay */
-  max-width: 780px;
-  text-align: center;
+  z-index: 3;
+  max-width: 800px;
 }
 
-.hero-video h1 {
-  font-size: 2.3rem;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
   color: var(--color-fondo-claro);
-  margin-bottom: 0.8rem;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
 }
 
-.hero-video p {
-  font-size: 1.1rem;
-  margin-bottom: 1.8rem;
-  color: #f0eae1;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el párrafo */
 }
 
 .hero-acciones {
@@ -204,7 +212,7 @@ a {
 /* Botones */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -232,10 +240,10 @@ a {
 }
 
 /* ==========================================================================
-   SECCIONES Y TÍTULOS
+   SECCIONES Y TITULOS
    ========================================================================== */
 .seccion {
-  padding: 3.5rem 0;
+  padding: 4rem 0;
 }
 
 .seccion-oscura {
@@ -246,7 +254,7 @@ a {
   text-align: center;
   font-size: 2rem;
   color: var(--color-primario);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitulo-seccion {
@@ -310,7 +318,7 @@ a {
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .video-contenedor {
@@ -353,16 +361,15 @@ a {
 }
 
 .icono-disco {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   background-color: var(--color-secundario);
   color: #ffffff;
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .reproductor-caja audio {
@@ -393,7 +400,7 @@ a {
 }
 
 /* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
+   FOOTER
    ========================================================================== */
 .footer {
   background-color: var(--color-texto);
@@ -411,7 +418,7 @@ a {
 }
 
 /* ==========================================================================
-   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   DISEÑO RESPONSIVO (MÓVILES)
    ========================================================================== */
 @media (max-width: 768px) {
   .btn-menu {
@@ -427,34 +434,19 @@ a {
     width: 100%;
     background-color: var(--color-primario);
     padding: 1.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
 
   .navegacion.activa {
     display: flex;
   }
 
-  .hero-video {
-    min-height: 320px;
-    padding: 2rem 1rem;
-  }
-
-  .hero-video h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-video p {
-    font-size: 0.95rem;
+  .hero h1 {
+    font-size: 2.1rem;
   }
 
   .hero-acciones {
     flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .reproductor-info {
-    flex-direction: column;
-    text-align: center;
   }
 
   .footer-contenido {

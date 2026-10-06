@@ -13,50 +13,48 @@
     <div class="contenedor header-contenido">
       
       <!-- Espacio para el Logo -->
-      <a href="#" class="logo-contenedor">
+      <a href="#inicio" class="logo-contenedor">
         <div class="logo-placeholder">
-          <!-- Puedes reemplazar este span por: <img src="img/logo.png" alt="Logo Raíces y Trazos"> -->
-          <span class="logo-texto-icono">R&T</span>
+          <img src="imagenes/logo.png" alt="Logo Raíces y Trazos">
         </div>
         <div class="logo-info">
           <span class="nombre-sitio">Raíces y Trazos</span>
-          <span class="slogan-sitio">Leyendas de Popayán</span>
+          <span class="slogan-sitio">La memoria que se dibuja</span>
         </div>
       </a>
 
-      <!-- Botón Menú Móvil -->
       <button class="btn-menu" id="btn-menu" aria-label="Abrir menú">
         ☰
       </button>
 
-      <!-- Navegación Principal -->
       <nav class="navegacion" id="navegacion">
         <a href="#inicio">Inicio</a>
         <a href="#imagenes">Galería</a>
         <a href="#videos">Videos</a>
         <a href="#audio">Audiorelatos</a>
-        <a href="#categorias">Categorías</a>
+        <a href="#categorias">Barrios y Mitos</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- SECCIÓN INICIO / HERO CON VIDEO DE FONDO -->
-    <section id="inicio" class="hero-video">
-      <!-- Contenedor del video en segundo plano -->
-      <div class="video-fondo-wrapper">
-        <video autoplay loop muted playsinline preload="auto" class="video-elemento">
-          <source src="videos/video1.mp4" type="video/mp4">
-          Tu navegador no soporta el reproductor de video.
+    <!-- Sección Inicio / Banner con Video de Fondo -->
+    <section id="inicio" class="hero">
+      <!-- Contenedor del video de YouTube de fondo -->
+      <div class="hero-video-bg">
+        <video autoplay muted loop playsinline>
+          <source src="videos/video001.mp4" type="video/mp4">
+          Tu navegador no soporta el formato de video.
         </video>
-        <!-- Capa semitransparente con paleta de color para garantizar legibilidad -->
-        <div class="video-overlay"></div>
       </div>
 
-      <!-- Contenido superpuesto sobre el video -->
+      <!-- Capa oscura de superposición para contraste -->
+      <a href="https://youtu.be/M1o8aVx_qHk" target="_blank" rel="noopener noreferrer" class="hero-overlay" title="Ver video completo en YouTube"></a>
+
+      <!-- Contenido principal -->
       <div class="contenedor hero-contenido">
         <h1>Mitos y Leyendas de Popayán</h1>
-        <p>Descubre los relatos orales, misterios y encantos que habitan en las casonas, empedrados y cerros de la Ciudad Blanca.</p>
+        <p>Un viaje por la memoria oral, las casonas coloniales, las sombras del Humilladero y los misterios que habitan la Ciudad Blanca.</p>
         <div class="hero-acciones">
           <a href="#audio" class="btn btn-primario">Escuchar Leyendas</a>
           <a href="#imagenes" class="btn btn-secundario">Explorar Galería</a>
@@ -76,7 +74,7 @@
           </div>
           <div class="tarjeta-cuerpo">
             <h3>El Puente del Humilladero</h3>
-            <p>Cuenta la tradición que al caer la medianoche, las sombras de antiguos caminantes y espectros cruzan bajo sus majestuosos arcos.</p>
+            <p>Cuenta la tradición que al caer la medianoche, las sombras de los antiguos caminantes cruzan bajo sus arcos.</p>
           </div>
         </article>
 
@@ -86,17 +84,17 @@
           </div>
           <div class="tarjeta-cuerpo">
             <h3>La Viuda de la Pampa</h3>
-            <p>Una aparición espectral vestida de negro que desorienta a los noctámbulos en los tradicionales callejones del barrio La Pampa.</p>
+            <p>Aparición espectral en los antiguos callejones de La Pampa que desorienta a los trasnochadores.</p>
           </div>
         </article>
 
         <article class="tarjeta-imagen">
           <div class="img-wrapper">
-            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="Cerro de las Tres Cruces">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="El Cerro de las Tres Cruces">
           </div>
           <div class="tarjeta-cuerpo">
             <h3>Cerro de las Tres Cruces</h3>
-            <p>La leyenda del encadenamiento del espíritu maligno mediante las tres cruces para proteger los valles del Pubén.</p>
+            <p>Leyenda del encadenamiento del espíritu del mal para proteger los valles del Pubén.</p>
           </div>
         </article>
       </div>
@@ -105,16 +103,16 @@
     <!-- Galería de Videos -->
     <section id="videos" class="seccion seccion-oscura">
       <div class="contenedor">
-        <h2 class="titulo-seccion">Relatos en Video</h2>
-        <p class="subtitulo-seccion">Documentales y producciones sobre la tradición oral de la ciudad.</p>
+        <h2 class="titulo-seccion">Documentales y Relatos en Video</h2>
+        <p class="subtitulo-seccion">Proyecciones sobre la tradición oral e historia mística de la ciudad.</p>
         
         <div class="grid-videos">
           <div class="tarjeta-video">
             <div class="video-contenedor">
               <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="El Duende y las Callejuelas" allowfullscreen></iframe>
             </div>
-            <h3>El Duende y las Casonas Coloniales</h3>
-            <p>Historias recopiladas sobre encantamientos y travesuras en el centro histórico de Popayán.</p>
+            <h3>El Duende y las Callejuelas de Popayán</h3>
+            <p>Historias de los ancianos sobre los encantos en las casonas coloniales.</p>
           </div>
 
           <div class="tarjeta-video">
@@ -122,7 +120,7 @@
               <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Los Túneles Secretos" allowfullscreen></iframe>
             </div>
             <h3>Los Misteriosos Túneles Subterráneos</h3>
-            <p>Leyendas e investigaciones sobre la red de pasadizos secretos ocultos bajo las iglesias y monasterios.</p>
+            <p>Verdades y mitos sobre las redes secretas bajo el centro histórico.</p>
           </div>
         </div>
       </div>
@@ -131,20 +129,20 @@
     <!-- Reproductor de Audio -->
     <section id="audio" class="seccion contenedor">
       <h2 class="titulo-seccion">Voces de la Noche (Audiorelatos)</h2>
-      <p class="subtitulo-seccion">Narraciones orales dramatizadas de los mitos más conocidos.</p>
+      <p class="subtitulo-seccion">Escucha las narraciones orales dramatizadas.</p>
 
       <div class="reproductor-caja">
         <div class="reproductor-info">
           <div class="icono-disco">🎙️</div>
           <div>
             <h3 id="audio-titulo">La Leyenda de la Carreta Puta</h3>
-            <p id="audio-subtitulo">Relatado por custodios de la memoria oral payanesa</p>
+            <p id="audio-subtitulo">Narrado por Abuelos de Popayán</p>
           </div>
         </div>
         
         <audio id="reproductor" controls>
           <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-          Tu navegador no soporta el reproductor de audio.
+          Tu navegador no soporta el elemento de audio.
         </audio>
       </div>
     </section>
@@ -153,31 +151,31 @@
     <section id="categorias" class="seccion seccion-oscura">
       <div class="contenedor">
         <h2 class="titulo-seccion">Categorías y Sectores Místicos</h2>
-        <p class="subtitulo-seccion">Explora los relatos según su ubicación geográfica y tradición.</p>
+        <p class="subtitulo-seccion">Filtra las historias según su origen urbano o rural.</p>
 
         <div class="grid-categorias">
           <div class="tarjeta-categoria">
             <div class="cat-icono">🏰</div>
             <h3>Centro Histórico</h3>
-            <p>Fantasmas de antiguas casonas, portones de madera, claustros e hidalgos.</p>
+            <p>Espectros de casonas, portones de madera, templos e hidalgos.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">🌿</div>
             <h3>Ríos y Cerros</h3>
-            <p>Mitos vinculados al Río Molino, el Cerro del Morro y los parajes del Pubén.</p>
+            <p>El Río Molino, Cerro de El Morro y la naturaleza encantada del Pubén.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">👻</div>
             <h3>Espantos Payaneses</h3>
-            <p>El Cura sin Cabeza, El Carabo, La Llorona y La Mula de tres patas.</p>
+            <p>La Llorona, El Cura sin Cabeza, El Carabo y La Mula de tres patas.</p>
           </div>
 
           <div class="tarjeta-categoria">
             <div class="cat-icono">📜</div>
             <h3>Tradición Oral</h3>
-            <p>Crónicas, coplas y cuentos transmitidos entre generaciones.</p>
+            <p>Crónicas, coplas y relatos contados de generación en generación.</p>
           </div>
         </div>
       </div>
@@ -189,7 +187,7 @@
     <div class="contenedor footer-contenido">
       <div>
         <h4>Raíces y Trazos</h4>
-        <p>Proyecto dedicado a la divulgación y preservación del patrimonio inmaterial de Popayán, Cauca.</p>
+        <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
       </div>
       <div>
         <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
@@ -197,25 +195,13 @@
     </div>
   </footer>
 
-  <!-- Script para Menú Móvil y Reproducción Asegurada del Video -->
   <script>
-    // Menú hamburguesa
+    // JS básico para el menú responsivo
     const btnMenu = document.getElementById('btn-menu');
     const navegacion = document.getElementById('navegacion');
 
     btnMenu.addEventListener('click', () => {
       navegacion.classList.toggle('activa');
-    });
-
-    // Forzar reproducción del video en silencio para navegadores estrictos
-    window.addEventListener('DOMContentLoaded', () => {
-      const video = document.querySelector('.video-elemento');
-      if (video) {
-        video.muted = true;
-        video.play().catch(err => {
-          console.log("El navegador bloqueó el autoplay del video:", err);
-        });
-      }
     });
   </script>
 </body>
