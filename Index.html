@@ -213,29 +213,29 @@
     </section>
   </main>
 
-<!-- Pie de Página -->
-<footer class="footer">
-  <div class="contenedor footer-contenido">
-    <!-- Información del proyecto -->
-    <div class="footer-info">
-      <h4>Raíces y Trazos</h4>
-      <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
-    </div>
-
-    <!-- Sección del Código QR -->
-    <div class="footer-qr">
-      <div class="qr-box">
-        <img src="imagenes/qrpage.png" alt="Código QR de Raíces y Trazos">
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <div class="contenedor footer-contenido">
+      <!-- Información del proyecto -->
+      <div class="footer-info">
+        <h4>Raíces y Trazos</h4>
+        <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
       </div>
-      <p class="qr-texto">¡Escanea y lleva el misterio de la Ciudad Blanca en tu bolsillo!</p>
+  
+      <!-- Sección del Código QR -->
+      <div class="footer-qr">
+        <div class="qr-box">
+          <img src="imagenes/qrpage.png" alt="Código QR de Raíces y Trazos">
+        </div>
+        <p class="qr-texto">¡Escanea y lleva el misterio de la Ciudad Blanca en tu bolsillo!</p>
+      </div>
+  
+      <!-- Derechos reservados -->
+      <div class="footer-copy">
+        <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
+      </div>
     </div>
-
-    <!-- Derechos reservados -->
-    <div class="footer-copy">
-      <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     // JS básico para el menú responsivo
@@ -246,5 +246,32 @@
       navegacion.classList.toggle('activa');
     });
   </script>
+
+  <script>
+    // Script para el Visor de Imágenes (Carrusel)
+    const visorImg = document.getElementById('visor-img');
+    const visorContador = document.getElementById('visor-contador');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+  
+    let imagenActual = 1;
+    const totalImagenes = 22;
+  
+    function actualizarVisor(index) {
+      visorImg.src = `imagenes/trazosbruja1/img${index}.jpeg`;
+      visorContador.textContent = `${index} / ${totalImagenes}`;
+    }
+  
+    btnNext.addEventListener('click', () => {
+      imagenActual = (imagenActual % totalImagenes) + 1;
+      actualizarVisor(imagenActual);
+    });
+  
+    btnPrev.addEventListener('click', () => {
+      imagenActual = (imagenActual - 2 + totalImagenes) % totalImagenes + 1;
+      actualizarVisor(imagenActual);
+    });
+  </script>
+  
 </body>
 </html>
