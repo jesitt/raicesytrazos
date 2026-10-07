@@ -516,7 +516,7 @@ a {
 .galeria-dibujos {
   display: grid;
   /* Fuerza exactamente 2 columnas iguales por fila */
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(1, 1fr); 
   gap: 1.2rem;
   /* Limita el ancho máximo del contenedor para que las imágenes no se vean gigantes */
   max-width: 600px; 
