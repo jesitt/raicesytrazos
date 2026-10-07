@@ -554,6 +554,120 @@ a {
 }
 
 /* ==========================================================================
+   VISOR DE IMÁGENES Y BOTÓN DE DESCARGA PDF
+   ========================================================================== */
+   .visor-contenedor-principal {
+     text-align: center;
+   }
+   
+   .visor-caja {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1.5rem;
+     margin: 2rem auto;
+     max-width: 650px;
+   }
+   
+   .visor-imagen-wrapper {
+     position: relative;
+     width: 100%;
+     max-width: 500px;
+     height: 350px;
+     background-color: #ffffff;
+     border: 3px solid var(--color-secundario);
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 6px 16px rgba(30, 26, 22, 0.15);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   .visor-imagen-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+   }
+   
+   /* Indicador numérico de imagen */
+   .visor-contador {
+     position: absolute;
+     bottom: 10px;
+     right: 10px;
+     background-color: var(--color-texto);
+     color: var(--color-fondo-claro);
+     padding: 4px 10px;
+     border-radius: 12px;
+     font-size: 0.85rem;
+     font-weight: bold;
+   }
+   
+   /* Botones de navegación (Anterior / Siguiente) */
+   .btn-visor {
+     background-color: var(--color-primario);
+     color: var(--color-fondo-claro);
+     border: none;
+     font-size: 1.5rem;
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   .btn-visor:hover {
+     background-color: var(--color-secundario);
+     color: var(--color-texto);
+     transform: scale(1.1);
+   }
+   
+   /* Botón de Descarga PDF */
+   .contenedor-descarga-pdf {
+     margin-top: 1.5rem;
+   }
+   
+   .btn-pdf {
+     background-color: var(--color-primario);
+     color: var(--color-fondo-claro);
+     padding: 0.9rem 2rem;
+     border-radius: 8px;
+     font-weight: bold;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
+     box-shadow: 0 4px 10px rgba(30, 26, 22, 0.2);
+     transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+   
+   .btn-pdf:hover {
+     background-color: var(--color-secundario);
+     color: var(--color-texto);
+     transform: translateY(-3px);
+   }
+   
+   /* Ajustes para móviles */
+   @media (max-width: 600px) {
+     .visor-caja {
+       gap: 0.5rem;
+     }
+   
+     .visor-imagen-wrapper {
+       height: 250px;
+     }
+   
+     .btn-visor {
+       width: 38px;
+       height: 38px;
+       font-size: 1.2rem;
+     }
+   }
+
+/* ==========================================================================
    DISEÑO RESPONSIVO (MÓVILES)
    ========================================================================== */
 @media (max-width: 768px) {
