@@ -264,6 +264,40 @@ a {
 }
 
 /* ==========================================================================
+   GALERÍA DE VIDEOS
+   ========================================================================== */
+.grid-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-video {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.video-contenedor {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.video-contenedor iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================================================================
    GALERÍA DE IMÁGENES
    ========================================================================== */
 .grid-galeria {
@@ -308,39 +342,6 @@ a {
   margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   GALERÍA DE VIDEOS
-   ========================================================================== */
-.grid-videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.tarjeta-video {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.video-contenedor {
-  position: relative;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.video-contenedor iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 
 /* ==========================================================================
    REPRODUCTOR DE AUDIO
