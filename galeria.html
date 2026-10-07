@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes | Raíces y Trazos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado / Navegación -->
+  <header class="header">
+    <div class="contenedor header-contenido">
+      
+      <!-- Logo -->
+      <a href="Index.html" class="logo-contenedor">
+        <div class="logo-placeholder">
+          <img src="imagenes/logo.png" alt="Logo Raíces y Trazos">
+        </div>
+        <div class="logo-info">
+          <span class="nombre-sitio">Raíces y Trazos</span>
+          <span class="slogan-sitio">Leyendas de Popayán</span>
+        </div>
+      </a>
+
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <nav class="navegacion" id="navegacion">
+        <a href="Index.html#inicio">Inicio</a>
+        <a href="Index.html#videos">Videos</a>
+        <a href="galeria.html" class="activo">Galería</a>
+        <a href="Index.html#audio">Audiorelatos</a>
+        <a href="Index.html#categorias">Barrios y Mitos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Encabezado de la Galería -->
+    <section class="banner-pagina">
+      <div class="contenedor">
+        <h1>Galería Fotográfica e Ilustraciones</h1>
+        <p>Explora los rincones, casonas y misterios de Popayán a través de imágenes detalladas.</p>
+      </div>
+    </section>
+
+    <!-- Sección de Galería Expandida -->
+    <section class="seccion contenedor">
+      <div class="grid-galeria">
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Puente del Humilladero">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>El Puente del Humilladero</h3>
+            <p>Cuenta la tradición que al caer la medianoche, las sombras de los antiguos caminantes cruzan bajo sus arcos.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="La Viuda de la Pampa">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>La Viuda de la Pampa</h3>
+            <p>Aparición espectral en los antiguos callejones de La Pampa que desorienta a los trasnochadores.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="El Cerro de las Tres Cruces">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Cerro de las Tres Cruces</h3>
+            <p>Leyenda del encadenamiento del espíritu del mal para proteger los valles del Pubén.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="El Molino de Moscopán">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>El Antiguo Molino de Moscopán</h3>
+            <p>Vestigio histórico sobre el río Molino, epicentro de misteriosos mitos coloniales.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Callejones del Centro">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>Callejones Coloniales</h3>
+            <p>Pasajes de paredes blancas y faroles de hierro donde resonaban los cascos de las mulas fantasma.</p>
+          </div>
+        </article>
+
+        <article class="tarjeta-imagen">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Noche en la Ciudad Blanca">
+          </div>
+          <div class="tarjeta-cuerpo">
+            <h3>La Carreta Puta</h3>
+            <p>Se dice que el sonido rodante de cadenas y madera retumba entre las casonas al filo de la madrugada.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <div class="contenedor footer-contenido">
+      <div>
+        <h4>Raíces y Trazos</h4>
+        <p>Proyecto de preservación cultural y memoria histórica de Popayán, Cauca.</p>
+      </div>
+      <div>
+        <p>&copy; 2026 Raíces y Trazos. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menú responsivo
+    const btnMenu = document.getElementById('btn-menu');
+    const navegacion = document.getElementById('navegacion');
+
+    btnMenu.addEventListener('click', () => {
+      navegacion.classList.toggle('activa');
+    });
+  </script>
+</body>
+</html>
