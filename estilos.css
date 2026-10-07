@@ -279,6 +279,9 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(122, 90, 66, 0.2);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
 }
 
 .tarjeta-imagen:hover {
