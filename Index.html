@@ -128,6 +128,35 @@
       </div>
     </section>
 
+  <!-- Visor de Imágenes e Interacción PDF (Debajo de Galería) -->
+  <section class="seccion seccion-oscura">
+    <div class="contenedor visor-contenedor-principal">
+      
+      <h2 class="titulo-seccion">Visor de Dibujos e Ilustraciones</h2>
+      <p class="subtitulo-seccion">Navega por los trazos de los niños y descarga la colección en PDF.</p>
+  
+      <!-- Visor de Imágenes (Carrusel) -->
+      <div class="visor-caja">
+        <button class="btn-visor prev" id="btn-prev" aria-label="Anterior">❮</button>
+        
+        <div class="visor-imagen-wrapper">
+          <img id="visor-img" src="imagenes/trazosbruja1/img1.jpeg" alt="Dibujo infantil">
+          <span id="visor-contador" class="visor-contador">1 / 22</span>
+        </div>
+  
+        <button class="btn-visor next" id="btn-next" aria-label="Siguiente">❯</button>
+      </div>
+  
+      <!-- Botón para descargar PDF -->
+      <div class="contenedor-descarga-pdf">
+        <a href="documentos/trazos_bruja.pdf" download class="btn btn-pdf">
+          📄 Descargar Galería en PDF
+        </a>
+      </div>
+  
+    </div>
+  </section>
+    
    <!-- Reproductor de Audio -->
     <section id="audio" class="seccion contenedor">
       <h2 class="titulo-seccion">Voces de la Noche (Audiorelatos)</h2>
