@@ -411,49 +411,20 @@ a {
 
 /* ==========================================================================
    GALERÍA DE IMÁGENES
+   ========================================================================== *//* ==========================================================================
+   ESTILOS PARA LA TARJETA HORIZONTAL DE LA GALERÍA
    ========================================================================== */
-.grid-galeria {
+
+/* Contenedor de la cuadrícula */
+.grid-galeria-horizontal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
   gap: 2rem;
 }
 
-.tarjeta-imagen {
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(122, 90, 66, 0.2);
-  transition: transform 0.3s ease;
-  width: 100%;
-  max-width: 400px;
-  justify-self: center;
-}
-
-.tarjeta-imagen:hover {
-  transform: translateY(-5px);
-}
-
-.img-wrapper {
-  height: 200px;
-  overflow: hidden;
-}
-
-.img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tarjeta-cuerpo {
-  padding: 1.2rem;
-}
-
-.tarjeta-cuerpo h3 {
-  color: var(--color-primario);
-  margin-bottom: 0.5rem;
-}
-
+/* Enlace que envuelve toda la tarjeta */
 .enlace-tarjeta-horizontal {
   display: block;
   text-decoration: none;
@@ -461,6 +432,89 @@ a {
   cursor: pointer;
 }
 
+/* Estructura general de la tarjeta horizontal */
+.tarjeta-imagen-horizontal {
+  background-color: var(--color-fondo-claro); /* Papel (#EFE4CF) */
+  border: 2px solid var(--color-secundario);   /* Arena (#C3B69C) */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(30, 26, 22, 0.1);
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Imagen izquierda (280px), texto derecha */
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-imagen-horizontal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(30, 26, 22, 0.18);
+}
+
+/* Contenedor de la imagen */
+.img-wrapper-horizontal {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-right: 1px solid var(--color-secundario);
+}
+
+.img-wrapper-horizontal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen cubriendo el espacio de manera armónica */
+}
+
+/* Cuerpo de texto de la tarjeta */
+.tarjeta-cuerpo-horizontal {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.tarjeta-cuerpo-horizontal h3 {
+  color: var(--color-primario); /* Sepia (#5A3413) */
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.tarjeta-cuerpo-horizontal p {
+  color: var(--color-texto); /* Tinta (#1E1A16) */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Estilo adicional para diferenciar el párrafo del proyecto pedagógico */
+.tarjeta-cuerpo-horizontal .texto-secundario {
+  font-size: 0.88rem;
+  opacity: 0.85;
+  border-top: 1px dashed var(--color-secundario);
+  padding-top: 0.6rem;
+}
+
+/* Diseño adaptativo para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .tarjeta-imagen-horizontal {
+    grid-template-columns: 1fr; /* Cambia a una sola columna: imagen arriba, texto abajo */
+  }
+
+  .img-wrapper-horizontal {
+    min-height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-secundario);
+  }
+
+  .tarjeta-cuerpo-horizontal {
+    padding: 1.2rem;
+  }
+}
 /* ==========================================================================
    CATEGORÍAS
    ========================================================================== */
