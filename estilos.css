@@ -454,6 +454,13 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.enlace-tarjeta-horizontal {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* ==========================================================================
    CATEGORÍAS
    ========================================================================== */
