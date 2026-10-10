@@ -1011,6 +1011,98 @@ a {
 }
 
 /* ==========================================================================
+   OPTIMIZACIÓN RESPONSIVA PARA MÓVILES (SECCIÓN DE CANCIONES)
+   ========================================================================== */
+
+/* Reglas generales para la sección */
+#canciones {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Pantallas medianas y móviles (menores a 768px) */
+@media (max-width: 768px) {
+  .contenedor-playlist {
+    grid-template-columns: 1fr; /* Una sola columna vertical */
+    padding: 1.25rem;
+    gap: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .reproductor-cancion-destacada {
+    padding: 1.25rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .caratula-cancion {
+    width: 80px;
+    height: 80px;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-cancion-actual h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-cancion-actual p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Ajuste para que el control de audio HTML5 no se desborde */
+  .control-audio-cancion {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .lista-canciones {
+    width: 100%;
+  }
+
+  .item-cancion {
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .cancion-nombre {
+    font-size: 0.88rem;
+  }
+
+  .cancion-autor {
+    font-size: 0.75rem;
+  }
+}
+
+/* Celulares pequeños (menores a 480px) */
+@media (max-width: 480px) {
+  .contenedor-playlist {
+    padding: 0.9rem;
+    gap: 1.2rem;
+    border-width: 1px;
+  }
+
+  .reproductor-cancion-destacada {
+    padding: 1rem 0.6rem;
+  }
+
+  .badge-genero {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .item-cancion {
+    padding: 0.65rem 0.5rem;
+  }
+
+  .cancion-duracion {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==========================================================================
    DISEÑO RESPONSIVO (MÓVILES)
    ========================================================================== */
 @media (max-width: 768px) {
