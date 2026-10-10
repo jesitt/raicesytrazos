@@ -189,6 +189,67 @@
       </div>  
     </div>
   </section>
+
+  <!-- Sección de Reproducción de Canciones -->
+<section id="canciones" class="seccion contenedor">
+  <h2 class="titulo-seccion">Canciones y Sonidos de Nuestra Tierra</h2>
+  <p class="subtitulo-seccion">Disfruta de la música y los ritmos inspirados en la leyenda de Popayán.</p>
+
+  <div class="contenedor-playlist">
+    <!-- Reproductor Principal Destacado -->
+    <div class="reproductor-cancion-destacada">
+      <div class="caratula-cancion">
+        <span class="icono-caratula">🎶</span>
+      </div>
+      <div class="info-cancion-actual">
+        <span class="badge-genero">Chirimía / Folklore</span>
+        <h3 id="titulo-cancion-activa">Canción de la Leyenda 1</h3>
+        <p id="artista-cancion-activa">Raíces y Trazos - Popayán</p>
+        
+        <!-- Reproductor de Audio -->
+        <audio id="reproductor-musica" controls class="control-audio-cancion">
+          <source id="fuente-cancion" src="audios/cancionbruja1.mp3" type="audio/mpeg">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Lista de Reproducción (Playlist de 3 canciones) -->
+    <div class="lista-canciones">
+      <h4 class="titulo-playlist">Lista de Reproducción</h4>
+      <ul class="items-playlist">
+        
+        <li class="item-cancion activa" onclick="cambiarCancion('audios/cancionbruja1.mp3', 'Canción de la Leyenda 1', 'Raíces y Trazos - Popayán', this)">
+          <div class="cancion-icono">▶</div>
+          <div class="cancion-detalles">
+            <span class="cancion-nombre">Canción de la Leyenda 1</span>
+            <span class="cancion-autor">Tradición Oral</span>
+          </div>
+          <span class="cancion-duracion">3:00</span>
+        </li>
+
+        <li class="item-cancion" onclick="cambiarCancion('audios/cancionbruja2.mp3', 'Canción de la Leyenda 2', 'Raíces y Trazos - Popayán', this)">
+          <div class="cancion-icono">▶</div>
+          <div class="cancion-detalles">
+            <span class="cancion-nombre">Canción de la Leyenda 2</span>
+            <span class="cancion-autor">Tradición Oral</span>
+          </div>
+          <span class="cancion-duracion">2:45</span>
+        </li>
+
+        <li class="item-cancion" onclick="cambiarCancion('audios/cancionbruja3.mp3', 'Canción de la Leyenda 3', 'Raíces y Trazos - Popayán', this)">
+          <div class="cancion-icono">▶</div>
+          <div class="cancion-detalles">
+            <span class="cancion-nombre">Canción de la Leyenda 3</span>
+            <span class="cancion-autor">Tradición Oral</span>
+          </div>
+          <span class="cancion-duracion">3:20</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
     
     <!-- Categorías -->
     <section id="categorias" class="seccion contenedor">
@@ -286,6 +347,29 @@
       actualizarVisor(paginaActual);
     });
   </script>
-  
+  <!-- Script para la interacción de la Playlist -->
+<script>
+  function cambiarCancion(rutaAudio, titulo, artista, elemento) {
+    const reproductor = document.getElementById('reproductor-musica');
+    const fuente = document.getElementById('fuente-cancion');
+    const tituloActivo = document.getElementById('titulo-cancion-activa');
+    const artistaActivo = document.getElementById('artista-cancion-activa');
+    
+    // Actualizar fuente e información
+    fuente.src = rutaAudio;
+    tituloActivo.textContent = titulo;
+    artistaActivo.textContent = artista;
+    
+    // Cargar y reproducir
+    reproductor.load();
+    reproductor.play();
+
+    // Actualizar clase activa en la lista visual
+    document.querySelectorAll('.item-cancion').forEach(item => {
+      item.classList.remove('activa');
+    });
+    elemento.classList.add('activa');
+  }
+</script>
 </body>
 </html>
