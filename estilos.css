@@ -264,6 +264,118 @@ a {
 }
 
 /* ==========================================================================
+   REPRODUCTOR DE AUDIO HORIZONTAL (DOS COLUMNAS)
+   ========================================================================== */
+.tarjeta-audio-horizontal {
+  background-color: var(--color-fondo-claro); /* Papel (#EFE4CF) */
+  border: 2px solid var(--color-secundario);   /* Arena (#C3B69C) */
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Columna texto más ancha que la del reproductor */
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 950px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(30, 26, 22, 0.1);
+}
+
+/* Columna Izquierda: Texto */
+.audio-texto-columna {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.etiqueta-audio {
+  display: inline-block;
+  background-color: var(--color-primario); /* Sepia (#5A3413) */
+  color: var(--color-fondo-claro);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.audio-titulo-principal {
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  line-height: 1.2;
+}
+
+.audio-descripcion-corta {
+  font-size: 0.98rem;
+  color: var(--color-texto); /* Tinta (#1E1A16) */
+  line-height: 1.6;
+}
+
+.audio-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--color-primario);
+  border-top: 1px dashed var(--color-secundario);
+  padding-top: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Columna Derecha: Reproductor */
+.audio-reproductor-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-secundario);
+  box-shadow: 0 4px 12px rgba(30, 26, 22, 0.05);
+}
+
+.disco-iluminado {
+  width: 75px;
+  height: 75px;
+  background: var(--color-primario);
+  color: var(--color-fondo-claro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: 0 4px 12px rgba(90, 52, 19, 0.3);
+}
+
+.reproductor-wrapper {
+  width: 100%;
+}
+
+.reproductor-wrapper audio {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Adaptación para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .tarjeta-audio-horizontal {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    padding: 1.5rem;
+    gap: 1.8rem;
+  }
+
+  .audio-texto-columna {
+    text-align: center;
+  }
+
+  .etiqueta-audio {
+    align-self: center;
+  }
+}
+
+/* ==========================================================================
    GALERÍA DE VIDEOS
    ========================================================================== */
 .grid-videos {
