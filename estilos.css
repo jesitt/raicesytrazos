@@ -454,44 +454,6 @@ a {
   margin-bottom: 0.5rem;
 }
 
-
-/* ==========================================================================
-   REPRODUCTOR DE AUDIO
-   ========================================================================== */
-.reproductor-caja {
-  background-color: var(--color-fondo-claro);
-  border: 2px solid var(--color-acento);
-  border-radius: 12px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.reproductor-info {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.icono-disco {
-  font-size: 2.5rem;
-  background-color: var(--color-secundario);
-  color: #ffffff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.reproductor-caja audio {
-  width: 100%;
-}
-
 /* ==========================================================================
    CATEGORÍAS
    ========================================================================== */
@@ -628,7 +590,7 @@ a {
 .galeria-dibujos {
   display: grid;
   /* Fuerza exactamente 2 columnas iguales por fila */
-  grid-template-columns: repeat(1, 1fr); 
+  grid-template-columns: repeat(2, 1fr); 
   gap: 1.2rem;
   /* Limita el ancho máximo del contenedor para que las imágenes no se vean gigantes */
   max-width: 600px; 
