@@ -415,7 +415,7 @@ a {
 
 /* Contenedor principal centrado */
 .galeria-horizontal-container {
-  max-width: 900px;
+  max-width: 1000px; /* Aumentado de 900px a 1000px */
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -445,24 +445,25 @@ a {
   border-color: var(--color-primario, #5A3413);
 }
 
-/* Columna Izquierda: Imagen (EVITA QUE SE VEA ENORME) */
+
+/* Columna Izquierda: Imagen Ampliada */
 .tarjeta-horizontal-img {
-  flex: 0 0 260px;          /* Ancho fijo de 260px */
-  max-width: 260px;
-  height: 280px;            /* Altura fija controlada */
+  flex: 0 0 380px;          /* Aumentado de 260px a 380px de ancho */
+  max-width: 380px;
+  height: 360px;            /* Aumentado de 280px a 360px de altura */
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-right: 2px solid var(--color-secundario, #C3B69C);
-  padding: 10px;            /* Margen interno para que el dibujo no toque los bordes */
+  padding: 12px;            /* Espacio interno para enmarcar el dibujo */
 }
 
 .tarjeta-horizontal-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;      /* Mantiene la proporción del dibujo sin recortarlo ni deformarlo */
+  object-fit: contain;      /* Mantiene el dibujo completo y nítido */
   border-radius: 6px;
 }
 
@@ -681,31 +682,31 @@ a {
    GALERÍA DE DIBUJOS INFANTILES (SOLO IMÁGENES)
    ========================================================================== */
 /* ==========================================================================
-   GALERÍA DE DIBUJOS INFANTILES (2 POR FILA Y MÁS PEQUEÑAS)
+   GALERÍA DE DIBUJOS INFANTILES (4 POR FILA EN PC / 1 POR FILA EN MÓVIL)
    ========================================================================== */
 .galeria-dibujos {
   display: grid;
-  /* Fuerza exactamente 2 columnas iguales por fila */
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 1.2rem;
-  /* Limita el ancho máximo del contenedor para que las imágenes no se vean gigantes */
-  max-width: 600px; 
-  margin: 0 auto; /* Centra la galería en la página */
+  /* 4 columnas iguales en escritorio */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1.5rem;
+  max-width: 1200px; /* Ancho amplio para acomodar bien las 4 columnas */
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .item-dibujo {
-  background-color: var(--color-fondo-claro);
-  border: 2px solid var(--color-secundario);
-  border-radius: 8px;
+  background-color: var(--color-fondo-claro, #EFE4CF);
+  border: 2px solid var(--color-secundario, #C3B69C);
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(30, 26, 22, 0.1);
+  box-shadow: 0 4px 12px rgba(30, 26, 22, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   aspect-ratio: 4 / 3;
 }
 
 .item-dibujo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(30, 26, 22, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(30, 26, 22, 0.2);
 }
 
 .item-dibujo img {
@@ -715,11 +716,26 @@ a {
   background-color: #ffffff;
 }
 
-/* Ajuste opcional para celulares muy pequeños */
-@media (max-width: 480px) {
+.item-dibujo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tablets (pantallas medianas): 2 por fila */
+@media (max-width: 900px) {
   .galeria-dibujos {
-    max-width: 100%;
-    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Celulares (pantallas pequeñas): 1 por fila */
+@media (max-width: 600px) {
+  .galeria-dibujos {
+    grid-template-columns: 1fr; /* 1 columna por fila */
+    gap: 1rem;
+    max-width: 90%;
   }
 }
 

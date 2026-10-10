@@ -159,32 +159,34 @@
       </div>
     </section>
 
-  <!-- Visor de Imágenes e Interacción PDF (Debajo de Galería) -->
+  <!-- Visor de Ilustraciones (Comic Bruja - 14 Páginas) -->
   <section class="seccion seccion-oscura">
     <div class="contenedor visor-contenedor-principal">
       
       <h2 class="titulo-seccion">Visor de Ilustraciones (Comic)</h2>
-      <p class="subtitulo-seccion">Navega por los relatos ilustrados y descarga la colección en PDF.</p>
-  
+      <p class="subtitulo-seccion">Explora la historia ilustrada página a página.</p>
+
       <!-- Visor de Imágenes (Carrusel) -->
       <div class="visor-caja">
         <button class="btn-visor prev" id="btn-prev" aria-label="Anterior">❮</button>
         
         <div class="visor-imagen-wrapper">
-          <img id="visor-img" src="imagenes/trazosbruja1/page1.jpeg" alt="Dibujo infantil">
-          <span id="visor-contador" class="visor-contador">1 / 5</span>
+          <img id="visor-img" src="imagenes/comicbruja1/page1.jpeg" alt="Ilustración cómic página 1">
+          <span id="visor-contador" class="visor-contador">Página 1 / 14</span>
         </div>
-  
+
         <button class="btn-visor next" id="btn-next" aria-label="Siguiente">❯</button>
       </div>
-  
-      <!-- Botón para descargar PDF -->
+
+      <!-- Botón para descargar PDF de la galería -->
       <div class="contenedor-descarga-pdf">
         <a href="documentos/comicbruja1.pdf" download class="btn btn-pdf">
           📄 Descargar Comic en PDF
         </a>
-      </div>
-  
+        <a href="documentos/comicbruja2.pdf" download class="btn btn-pdf btn-pdf-comic">
+        📚 Descargar Cómic Abierto en PDF
+        </a>
+      </div>  
     </div>
   </section>
     
@@ -257,29 +259,31 @@
     });
   </script>
 
+  <!-- Script para la navegación de 14 páginas del comic -->
   <script>
-    // Script para el Visor de Imágenes (Carrusel)
     const visorImg = document.getElementById('visor-img');
     const visorContador = document.getElementById('visor-contador');
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
-  
-    let imagenActual = 1;
-    const totalImagenes = 22;
-  
+
+    let paginaActual = 1;
+    const totalPaginas = 14;
+    const rutaCarpeta = 'imagenes/comicbruja1/';
+
     function actualizarVisor(index) {
-      visorImg.src = `imagenes/trazosbruja1/img${index}.jpeg`;
-      visorContador.textContent = `${index} / ${totalImagenes}`;
+      visorImg.src = `${rutaCarpeta}page${index}.jpeg`;
+      visorImg.alt = `Ilustración cómic página ${index}`;
+      visorContador.textContent = `Página ${index} / ${totalPaginas}`;
     }
-  
+
     btnNext.addEventListener('click', () => {
-      imagenActual = (imagenActual % totalImagenes) + 1;
-      actualizarVisor(imagenActual);
+      paginaActual = (paginaActual % totalPaginas) + 1;
+      actualizarVisor(paginaActual);
     });
-  
+
     btnPrev.addEventListener('click', () => {
-      imagenActual = (imagenActual - 2 + totalImagenes) % totalImagenes + 1;
-      actualizarVisor(imagenActual);
+      paginaActual = (paginaActual - 2 + totalPaginas) % totalPaginas + 1;
+      actualizarVisor(paginaActual);
     });
   </script>
   
