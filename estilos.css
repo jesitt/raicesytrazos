@@ -854,6 +854,163 @@ a {
    }
 
 /* ==========================================================================
+   SECCIÓN DE REPRODUCCIÓN DE CANCIONES (PLAYLIST)
+   ========================================================================== */
+.contenedor-playlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: var(--color-fondo-claro, #EFE4CF); /* Papel */
+  border: 2px solid var(--color-secundario, #C3B69C);   /* Arena */
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 950px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(30, 26, 22, 0.08);
+}
+
+/* Columna Izquierda: Reproductor Destacado */
+.reproductor-cancion-destacada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-secundario, #C3B69C);
+}
+
+.caratula-cancion {
+  width: 110px;
+  height: 110px;
+  background-color: var(--color-primario, #5A3413); /* Sepia */
+  color: var(--color-fondo-claro, #EFE4CF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(90, 52, 19, 0.25);
+}
+
+.badge-genero {
+  background-color: var(--color-secundario, #C3B69C);
+  color: var(--color-texto, #1E1A16);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.info-cancion-actual h3 {
+  color: var(--color-primario, #5A3413);
+  font-size: 1.35rem;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.info-cancion-actual p {
+  color: var(--color-texto, #1E1A16);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.control-audio-cancion {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Columna Derecha: Lista de Canciones */
+.lista-canciones {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-playlist {
+  color: var(--color-primario, #5A3413);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-secundario, #C3B69C);
+  padding-bottom: 0.4rem;
+}
+
+.items-playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.item-cancion {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background-color: #ffffff;
+  border: 1px solid var(--color-secundario, #C3B69C);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.item-cancion:hover {
+  background-color: var(--color-secundario, #C3B69C);
+  transform: translateX(4px);
+}
+
+.item-cancion.activa {
+  background-color: var(--color-primario, #5A3413);
+  color: var(--color-fondo-claro, #EFE4CF);
+  border-color: var(--color-primario, #5A3413);
+}
+
+.item-cancion.activa .cancion-autor,
+.item-cancion.activa .cancion-duracion {
+  color: var(--color-fondo-claro, #EFE4CF);
+  opacity: 0.9;
+}
+
+.cancion-icono {
+  font-size: 0.85rem;
+}
+
+.cancion-detalles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cancion-nombre {
+  font-weight: bold;
+  font-size: 0.92rem;
+}
+
+.cancion-autor {
+  font-size: 0.78rem;
+  color: var(--color-texto, #1E1A16);
+  opacity: 0.75;
+}
+
+.cancion-duracion {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+/* Responsivo para móviles y tablets */
+@media (max-width: 768px) {
+  .contenedor-playlist {
+    grid-template-columns: 1fr;
+    padding: 1.2rem;
+  }
+}
+
+/* ==========================================================================
    DISEÑO RESPONSIVO (MÓVILES)
    ========================================================================== */
 @media (max-width: 768px) {
